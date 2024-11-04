@@ -29,6 +29,8 @@ Create a ".env" file and add contents like the following (using your own AlphaVa
 ALPHAVANTAGE_API_KEY="..."
 ```
 
+TODO include instructions here for signing up for email sending platform. Obtain sendgrid API key, and set the key 
+
 ## Usage
 
 Run the example script:
@@ -49,4 +51,9 @@ Run the stocks report:
 
 ```sh
 python app/stocks.py
+'''
+
+
+Run the example email sending file:
+
 '''
