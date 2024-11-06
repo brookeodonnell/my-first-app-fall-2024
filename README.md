@@ -57,3 +57,11 @@ python app/stocks.py
 Run the example email sending file:
 
 '''
+
+''' 
+
+Run the rps game
+'''
+
+python app/rps.py
+
