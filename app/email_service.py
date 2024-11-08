@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv() # looks in the ".env" file for env vars
 
-SENDGRID_SENDER_ADDRESS = os.getenv("SENDGRID_SENDER_ADDRESS")
+SENDGRID_SENDER_ADDRESS = os.getenv("SENDGRID_SENDER_ADDRESS", default="demo")
 SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
 
 
@@ -53,7 +53,8 @@ def send_email_with_sendgrid(recipient_address=SENDGRID_SENDER_ADDRESS,
         print(type(err))
         print(err)
 
-
+# HELPER FUNCTION:
+def send_email_with_sendgrid(recipient_address=SENDGRID_SENDER_ADDRESS,)
 
 
 # SEND EXAMPLE EMAIL:
