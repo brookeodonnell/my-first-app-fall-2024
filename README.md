@@ -35,7 +35,6 @@ SENDGRID_SENDER_ADDRESS = "..."
 '''
 
 ## Usage
-
 '''
 Run the example script:
 
@@ -69,3 +68,11 @@ Run the rps game
 '''sh
 python app/rps.py
 '''
+
+## Testing
+
+Run tests:
+
+```sh
+pytest
+```
