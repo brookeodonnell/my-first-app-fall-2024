@@ -36,6 +36,7 @@ SENDGRID_SENDER_ADDRESS = "..."
 
 ## Usage
 
+'''
 Run the example script:
 
 ```sh
