@@ -3,6 +3,7 @@ from pandas import DataFrame
 
 from app.stocks import fetch_stocks_csv
 
+
 def test_stock_data_fetching():
 
     df = fetch_stocks_csv("SPOT")
