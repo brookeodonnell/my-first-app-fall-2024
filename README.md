@@ -59,24 +59,26 @@ Run the stocks report:
 
 python -m app.stocks
 
-'''
+```
 
 Run the example email sending file:
 
-'''sh
+```sh
 python app/email_service.py
-''' 
+```
 
 Run the rps game
 
-'''sh
-python app/rps.py
-'''
+```sh
 
-## Testing
+python app/rps.py
+
+```
 
 Run tests:
 
 ```sh
+
 pytest
+
 ```
