@@ -8,6 +8,11 @@ from plotly.express import line
 
 
 from app.alpha_service import API_KEY
+from app.email_service import send_email_with_sendgrid
+
+
+def format_usd(my_price):
+    return f"${float(my_price):,.2f}"
 
 def fetch_stocks_csv(symbol):
     request_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={API_KEY}&outputsize=full&datatype=csv"
@@ -42,6 +47,8 @@ if __name__ == "__main__":
     #print(first_row)
     print(f"${first_row['adjusted_close']}", "as of", first_row["timestamp"])
 
+    recent_df = df.iloc[0:100] # use slicing or df.head(100)
+    print(len(recent_df))
 
     # Challenge B
     #
@@ -71,3 +78,12 @@ if __name__ == "__main__":
                 title=f"Stock Prices ({symbol})",
             labels= {"x": "Date", "y": "Stock Price ($)"})
     fig.show()
+
+    # SEND EMAIL
+
+    latest_price = first_row['adjusted_close']
+
+    send_email_with_sendgrid(subject="Stocks Report",
+        html_content=f"Latest price for {symbol} is ${latest_price}"
+    )
+
