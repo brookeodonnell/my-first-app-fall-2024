@@ -58,7 +58,6 @@ Run the stocks report:
 #python app/stocks.py
 
 python -m app.stocks
-
 ```
 
 Run the example email sending file:

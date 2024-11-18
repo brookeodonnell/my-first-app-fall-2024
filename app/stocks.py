@@ -47,6 +47,8 @@ if __name__ == "__main__":
     #print(first_row)
     print(f"${first_row['adjusted_close']}", "as of", first_row["timestamp"])
 
+    recent_df = df.iloc[0:100] # use slicing or df.head(100)
+    print(len(recent_df))
 
     # Challenge B
     #
@@ -84,3 +86,4 @@ if __name__ == "__main__":
     send_email_with_sendgrid(subject="Stocks Report",
         html_content=f"Latest price for {symbol} is ${latest_price}"
     )
+
