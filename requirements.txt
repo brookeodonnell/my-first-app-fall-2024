@@ -12,5 +12,5 @@ sendgrid==6.5.0
 
 pytest
 
-#this
-unicorn
+#used in production to run our web app
+gunicorn
