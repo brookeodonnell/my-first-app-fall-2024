@@ -90,3 +90,6 @@ if __name__ == "__main__":
     send_email_with_sendgrid(subject="Unemployment Rates",
         html_content=f"The latest unemployment rate as of {data[0]['date']} was {data[0]['value']}%"
     )
+
+def format_pct(my_number):
+    return f"{my_number:.2f}%"
