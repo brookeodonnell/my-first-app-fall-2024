@@ -8,6 +8,7 @@ from web_app.routes.stocks_routes import stocks_routes
 from web_app.routes.unemployment_routes import unemployment_routes
 from web_app.routes.product_routes import product_routes
 
+
 SECRET_KEY = os.getenv("SECRET_KEY", default="super secret") # set this to something else on production!!!
 
 def create_app():
